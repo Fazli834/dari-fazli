@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fazli Minta Maaf 😩💕</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fff0f5;
+      font-family: 'Comic Sans MS', cursive;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: #ff3399;
+      font-size: 2.8em;
+      margin: 0.2em 0;
+    }
+
+    p {
+      font-size: 1.3em;
+      color: #333;
+      margin: 0.5em 1em;
+      max-width: 90%;
+    }
+
+    button {
+      padding: 1em 2em;
+      margin: 1em;
+      border: none;
+      border-radius: 30px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    #yesBtn {
+      background-color: #ff66b2;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: #eeeeee;
+      color: #333;
+      position: relative;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+
+    .hearts {
+      position: absolute;
+      top: -20px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+content://com.android.externalstorage.documents/tree/primary%3AHtml::primary:Html/maaf-fazli.html
+    .heart {
+      position: absolute;
+      color: #ff66cc;
+      font-size: 2em;
+      animation: float 5s infinite ease-in;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(0.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts" id="hearts"></div>
+  <h1>Sayang... Maaf Ya 😢</h1>
+  <p>Yang nulis ini Fazli, pacar kamu yang kadang ngeselin tapi ganteng 🧸✨</p>
+  <p>Aku minta maaf banget ya, soalnya...</p>
+  <p>Kalau kamu sedih, aku juga ikut sedih. Kalau kamu nangis, aku bisa meleleh 😭</p>
+  <p>Maafin fazli yaa, plis... nanti aku beliin seblak, boba, dan peluk 3x 😚</p>
+
+  <button id="yesBtn">Aku maafin kamu 😘</button>
+  <button id="noBtn">Enggak ah, males 🤨</button>
+
+  <script>
+    const heartsContainer = document.getElementById("hearts");
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.innerText = "💖";
+      heartsContainer.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }, 300);
+
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn = document.getElementById("noBtn");
+
+    yesBtn.onclick = () => {
+      alert("YAAAAY! I LOVE YOUU ❤️❤️❤️ - dari Fazli yang ga bakal ngulangin lagi 😇");
+    };
+
+    noBtn.onmouseenter = () => {
+      // Tombol kabur kalau disentuh 😆
+      noBtn.style.position = 'absolute';
+      noBtn.style.top = Math.random() * 80 + "%";
+      noBtn.style.left = Math.random() * 80 + "%";
+    };
+  </script>
+</body>
+</html>
